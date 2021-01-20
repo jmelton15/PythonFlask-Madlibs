@@ -35,8 +35,14 @@ class Story:
 
         return text
 
-def create_js():
-    
+def create_dictionary():
+    """Stores all the different madlib stories in a dictionary for future use.
+
+    Returns:
+        a dictionary object with a key:value of id:story.
+        Inside each story are {keys} that will be used to reach the values of a dictionary
+        of an object that will be used for the story class
+    """
     stories = {
         "1":"Once upon a time, long ago in {1}, there lived a" + 
             " large {2} {3}. It loved to {4} {5}.",

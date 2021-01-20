@@ -1,5 +1,5 @@
 from flask import Flask, request, render_template
-from stories import Story,create_js
+from stories import Story,create_dictionary
 import json
 
 app = Flask(__name__)
@@ -15,7 +15,7 @@ def landing_page():
 def story_page():
     """Page that displays completed Madlib Story!
     """
-    story_dictionary = create_js()
+    story_dictionary = create_dictionary()
     
     
     
