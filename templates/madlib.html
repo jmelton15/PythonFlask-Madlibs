@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title%}Create Madlib{% endblock %}
+
+{% block content %}
+<div class="d-flex flex-column align-items-center mx-5" >
+    <form id="madlib-form" name="madlib" action="/story">
+        <label class="mt-3" for="place" id="input1-label">Name A [place]</label>
+        <input class="form-control" id="place" name="input-1" placeholder=" ">
+        <label class="mt-3" for="noun" id="input2-label">Name A [noun]</label>
+        <input class="form-control" id="noun" name="input-2" placeholder=" ">
+        <label class="mt-3" for="verb" id="input3-label">Name A [verb]</label>
+        <input class="form-control" id="verb" name="input-3" placeholder=" ">
+        <label class="mt-3" for="adjective" id="input4-label">Name An [adjective]</label>
+        <input class="form-control" id="adjective" name="input-4" placeholder=" ">
+        <label class="mt-3" for="plural-noun" id="input5-label">Name A [plural-noun]</label>
+        <input class="form-control" id="plural-noun" name="input-5" placeholder=" ">
+        <select class="form-select mt-3 mb-3" id="story-theme" name="story-theme" aria-label="Default select example">
+            <option value="1">Default Story Theme</option>
+            <option value="2">Space Story Theme</option>
+            <option value="3">Ocean Story Theme</option>
+            <option value="4">Forest Story Theme</option>
+        </select>
+        <p class="mt-3 mb-3" id="story-desc" name="story-desc">Once upon a time, long ago in {place}, there lived a 
+            large {adjective} {noun}. It loved to {verb} {plural_noun}.</p>
+        <button class="btn btn-success btn-lg mt-3">Submit</button>
+    </form>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="static/madlibapp.js"></script>
+{% endblock %}

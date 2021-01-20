@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title%} Madlib Story {% endblock %}
+
+{% block content %}
+<div class="d-flex" id="paper">
+  <div id="pattern">
+    <div id="content">
+        <b>Your Story...</b>
+        <br>
+        <p>{{madlib}}</p>
+        
+        
+    </div>
+  </div>
+  <a class="position-absolute bottom-0 end-0" id="home-link" href="/">Go Back To Main Page</a>
+</div>
+
+{% endblock %}
